@@ -82,8 +82,6 @@ module.exports = require("react-router-dom");
 "use strict";
 
 
-__webpack_require__(3);
-
 var _express = __webpack_require__(4);
 
 var _express2 = _interopRequireDefault(_express);
@@ -105,12 +103,7 @@ app.listen(Port, function () {
 });
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = require("ignore-styles");
-
-/***/ }),
+/* 3 */,
 /* 4 */
 /***/ (function(module, exports) {
 

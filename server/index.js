@@ -1,4 +1,3 @@
-import 'ignore-styles'
 import express from 'express'
 import requestHandler from './helpers/request-handler'
 
