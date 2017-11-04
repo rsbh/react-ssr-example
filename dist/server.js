@@ -29924,7 +29924,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (_ref) {
   var body = _ref.body;
 
-  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>React Server Side Rendering</title>\n      </head>\n      <body>\n        <div id=\"app\">" + body + "</div>\n        <script src=\"bundle.js\" defer></script>\n      </body>      \n    </html>\n  ";
+  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>React Server Side Rendering</title>\n        <!-- Global site tag (gtag.js) - Google Analytics -->\n        <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-41755939-7\"></script>\n        <script>\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n        \n          gtag('config', 'UA-41755939-7');\n        </script>        \n      </head>\n      <body>\n        <div id=\"app\">" + body + "</div>\n        <script src=\"bundle.js\" defer></script>\n      </body>      \n    </html>\n  ";
 };
 
 /***/ }),
