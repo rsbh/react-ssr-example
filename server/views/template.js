@@ -17,6 +17,7 @@ export default ({ body }) => {
       <body>
         <div id="app">${body}</div>
         <script src="bundle.js" defer></script>
+        <script src="vendor.js" defer></script>
       </body>      
     </html>
   `

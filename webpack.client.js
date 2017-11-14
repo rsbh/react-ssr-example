@@ -4,10 +4,13 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    bundle: './src/index.js',
+    vendor: ['react', 'react-dom', 'react-router-dom']
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   devtool: 'inline-source-map',
   module: {
@@ -21,7 +24,10 @@ const config = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'})
+  ]
 }
 
 module.exports = merge(baseConfig, config)
