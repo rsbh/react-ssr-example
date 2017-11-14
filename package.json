@@ -10,8 +10,8 @@
     "dev": "npm-run-all --parallel dev:*",
     "lint": "esw webpack.* src --color",
     "lint-watch": "npm run lint -- --watch",
-    "prod:build-client": "webpack --config webpack.client.js -p",
-    "prod:build-server": "webpack --config webpack.server.js -p",
+    "prod:build-client": "webpack --config webpack.client.prod.js",
+    "prod:build-server": "webpack --config webpack.server.prod.js",
     "build": "npm-run-all --parallel prod:*",
     "start": "node dist/server.js"
   },
