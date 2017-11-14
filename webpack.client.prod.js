@@ -25,7 +25,7 @@ const config = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'})
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor'})
   ]
 }
 
