@@ -1,9 +1,10 @@
-export default ({ body }) => {
+export default ({ body, helmet }) => {
   return `
     <!DOCTYPE html>
-    <html>
+    <html ${helmet.htmlAttributes.toString()}>
       <head>
-        <title>React Server Side Rendering</title>
+      ${helmet.title.toString()}
+      ${helmet.meta.toString()}
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41755939-7"></script>
         <script>
@@ -14,7 +15,7 @@ export default ({ body }) => {
           gtag('config', 'UA-41755939-7');
         </script>        
       </head>
-      <body>
+      <body ${helmet.bodyAttributes.toString()}>
         <div id="app">${body}</div>
         <script src="vendor.js" defer></script>
         <script src="bundle.js" defer></script>
