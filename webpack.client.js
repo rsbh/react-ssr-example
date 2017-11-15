@@ -6,7 +6,7 @@ const baseConfig = require('./webpack.base')
 const config = {
   entry: {
     bundle: './src/index.js',
-    vendor: ['react', 'react-dom', 'react-router-dom']
+    vendor: ['react', 'react-dom', 'react-router-dom', 'react-router-config']
   },
   output: {
     path: path.resolve(__dirname, 'public'),
