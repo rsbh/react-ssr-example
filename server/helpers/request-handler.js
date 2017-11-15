@@ -11,7 +11,7 @@ function requesthandler (req, res) {
     <StaticRouter location={req.path} context={{}}>
       {renderRoutes(Routes) }
     </StaticRouter>)
-  const helmet = Helmet.renderStatic()  
+  const helmet = Helmet.renderStatic()
   res.send(template({body, helmet}))
 }
 
