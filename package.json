@@ -8,6 +8,7 @@
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:run-server": "nodemon dist/server.js --watch dist",
     "dev": "npm-run-all --parallel dev:*",
+    "check-lint": "eslint server/** src/**",
     "lint": "esw webpack.* src --color",
     "lint-watch": "npm run lint -- --watch",
     "prod:build-client": "webpack --config webpack.client.prod.js",
